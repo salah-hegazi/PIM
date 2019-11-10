@@ -1,0 +1,75 @@
+---------url---------
+http://127.0.0.1:8000/products/create/category
+HTTP method:
+
+1-GET
+to list all root categories with their nesting subcategories
+
+2-POST
+with 'parent_name' and 'name' keys:
+'parent_name': 'x', 'name': 'y'
+to create a new category with name 'y'  and parent 'x'
+with only 'name' key
+'name': 'x'
+to create a new category with name 'x' as a root category
+
+
+
+--------url---------
+http://127.0.0.1:8000/products/create/product
+
+HTTP method:
+
+1-GET
+with url param 'category'
+'category': 'x'
+to list all products under the category 'x' with pagination 10 items per page
+to get the x page if existed set param 'page': x
+
+2-POST
+with raw data sent over the request and content-type application/json
+{
+"name": "x",
+"price": "20",
+"quantity": "20",
+"code": "20",
+"categories": ["y", "z"] # must be in form of list when sending more than one category
+}
+to create a new product with these values
+
+
+
+
+
+--------url---------
+http://127.0.0.1:8000/products/rud/category/<id>
+
+HTTP method:
+
+1-GET
+to retrieve category whose id=id(sent in the url<id>)
+
+2-PATCH
+to update some attributes of category object whose id=id(sent in the url<id>)
+
+2-DELETE
+to delete category object whose id=id(sent in the url<id>)
+
+
+
+
+--------url---------
+http://127.0.0.1:8000/products/rud/product/<code>
+
+HTTP method:
+
+1-GET
+to retrieve product whose code=code(sent in the url<code>)
+
+2-PATCH
+to update some attributes of category object whose code=code(sent in the url<code>)
+
+2-DELETE
+to delete category object whose code=code(sent in the url<code>)
+
+
