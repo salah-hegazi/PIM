@@ -1,6 +1,6 @@
 PIM
 =======
-PIM stands for Product Information Management. It is a web application to handle products and its categories. The application enables to manage the content through CRUD APIs. Categories is in the shape of tree, some categories is parent nodes, other is childs.
+PIM stands for Product Information Management. It is a web application to handle products and its categories. The application enables to manage the content through CRUD APIs. Categories is in the shape of tree, some categories are parent nodes, others are childs.
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
